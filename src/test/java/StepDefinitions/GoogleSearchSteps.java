@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.GoogleSearchPage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,7 +33,11 @@ public class GoogleSearchSteps {
     @When("^I enter (.*) in box$")
     public void i_enter_search_term_in_box(String searchterm) {
 
-        driver.findElement(By.name("q")).sendKeys(searchterm);
+//        new page object
+        GoogleSearchPage search = new GoogleSearchPage(driver);
+//        use pom method
+        search.enter_search_term(searchterm);
+
     }
 
     @When("I click on Search button")

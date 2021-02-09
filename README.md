@@ -13,7 +13,7 @@ A BDD project that uses Cucumber with Java and Selenium
 - [x] create feature file under src/test/resources package
 - [x] create step definitions file under src/test/java/StepDefinitions
 - [x] create runner class under src/test/java/StepDefinitions
-- [ ] ability to handle parameters 
+- [x] ability to handle parameters 
 - [ ] Pom/page factory  
 - [ ] use Dockerfile
 - [ ] docker-compose
