@@ -3,11 +3,21 @@ package StepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginSteps {
+import java.util.concurrent.TimeUnit;
+
+public class GoogleSearchSteps {
+
+    WebDriver driver = null;
 
     @Given("User is on Google Search Page")
     public void user_is_on_google_search_page() {
+        System.out.println("Opening Browser...");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.get("http://www.google.com");
         System.out.println("User is on search page");
     }
 
@@ -24,6 +34,8 @@ public class LoginSteps {
     @Then("Show Results")
     public void show_results() {
         System.out.println("Showing results");
+        driver.quit();
+        System.out.println("Closed Browser");
     }
 
 
