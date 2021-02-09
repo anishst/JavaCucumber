@@ -1,13 +1,12 @@
 package StepDefinitions;
 
-import org.junit.runner.RunWith;
-
-import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features="src/test/resources/Features",
+        features="src/test/resources/FeaturewithTags",
         glue= {"StepDefinitions"},
         monochrome = true,
         //plug-in = {"pretty", "html:target/HtmlReports/test_report.html"}, // HTML report
@@ -17,6 +16,10 @@ import io.cucumber.junit.Cucumber;
                 "html:target/HtmlReports/test_report.html",
                 "json:target/JSONReports/test_report.json",
                 "junit:target/XMLReports/test_report.xml"
-        })
-public class TestRunner {
+        },
+        tags="@stability or @regression" // runs features with tag of stability or regression
+//        ags="@stability and @regression" // runs features with tag of stability and regression
+//        tags="@stability" // runs features with tag of stability
+)
+public class TestRunner_usingtags {
 }

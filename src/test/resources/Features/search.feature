@@ -3,7 +3,6 @@ Feature: To Test Google Search
 #  Tests the Google Search Feature
 
 # simple format
-#  @stability
   Scenario: Test Google Search
     Given User is on Google Search Page
     When I enter Google in box
