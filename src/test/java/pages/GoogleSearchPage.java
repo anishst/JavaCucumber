@@ -3,10 +3,10 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-// POM - page
+// POM - page object model version
 public class GoogleSearchPage {
 
-    WebDriver driver;
+    WebDriver driver = null;
 
     //    constructor
     public GoogleSearchPage(WebDriver driver) {

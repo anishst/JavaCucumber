@@ -4,14 +4,14 @@ Feature: To Test Google Search
 
 # simple format
 #  @stability
-#  Scenario: Test Google Search
-#    Given User is on Google Search Page
-#    When I enter search term in box
-#    And I click on Search button
-#    Then Show Results
+  Scenario: Test Google Search
+    Given User is on Google Search Page
+    When I enter Google in box
+    And I click on Search button
+    Then Show Results
 
 # data table example
-  Scenario Outline: Test Google Search
+  Scenario Outline: Test Google Search using data tables
     Given User is on Google Search Page
     When I enter <search_term> in box
     And I click on Search button
