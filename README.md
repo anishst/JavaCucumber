@@ -22,6 +22,10 @@ A BDD project that uses Cucumber with Java and Selenium
     - examples: @After, @Before
     - control flow using order: ```@Before(order=1)```
     - conditional hooks to run things tagged with smoke: ```@Before("@smoke")```
+- [x] using Background
+    - step or a group of steps that are commond to all the scenarios in a feature
+    - avoids repetition; visible to readers
+- [ ] command line usage
 - [x] use Dockerfile
     - to create image: ``` docker build -t javacucumber .```
 - [ ] docker-compose

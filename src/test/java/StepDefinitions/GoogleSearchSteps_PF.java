@@ -28,7 +28,7 @@ public class GoogleSearchSteps_PF {
     public void browserSetup() {
         //driver setup
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         driver = new ChromeDriver(options); // assumes chrome driver is setup and is in Path var
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
