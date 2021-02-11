@@ -15,7 +15,7 @@ import io.cucumber.junit.Cucumber;
         //plugin = {"pretty", "junit:target/XMLReports/test_report.xml"} // junit xml report
         plugin = {"pretty",
                 "html:target/HtmlReports/test_report.html",
-                "json:target/JSONReports/test_report.json",
+                "json:target/cucumber.json", // needs to under target folder for maven-cucumber-reporting to work
                 "junit:target/XMLReports/test_report.xml"
         })
 public class TestRunner {
