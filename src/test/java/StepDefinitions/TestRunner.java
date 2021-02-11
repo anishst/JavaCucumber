@@ -7,8 +7,8 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features="src/test/resources/Features",
-        glue= {"StepDefinitions"},
+        features = "src/test/resources/Features",
+        glue = {"StepDefinitions"},
         monochrome = true,
         //plug-in = {"pretty", "html:target/HtmlReports/test_report.html"}, // HTML report
         //plugin = {"pretty", "json:target/JSONReports/test_report.json"} // JSON report
